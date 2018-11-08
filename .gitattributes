@@ -10,4 +10,4 @@ package*.json export-ignore
 composer.json export-ignore
 /src export-ignore
 # css no-minify
-/assets/css/maintenance.css
+maintenance.css export-ignore

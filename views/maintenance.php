@@ -16,7 +16,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="<?php echo plugins_url('assets/css/maintenance.css', dirname(__FILE__)); ?>">
+	<link rel="stylesheet" href="<?php echo plugins_url('assets/css/maintenance.min.css', dirname(__FILE__)); ?>">
 
 	<title><?php echo esc_html(get_bloginfo('name')); ?> - <?php _e('Melhorias estão sendo implementadas', 'ip-maintenance-mode');?>.</title>
 </head>

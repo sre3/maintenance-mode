@@ -2,7 +2,7 @@
 /*
  * Plugin Name: IP Maintenance Mode
  * Version: 1.0.5
- * Description: Displays a maintenance mode page except when logged in as Admin or by the query /?versite=1
+ * Description: Display a maintenance mode page except when logged in as Admin or by the query /?versite=1
  * Author: Ivan Petermann
  * Author URI: https://ivanpetermann.com
  * Requires at least: 4.0

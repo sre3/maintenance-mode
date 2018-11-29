@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: IP Maintenance Mode
- * Version: 1.0.5
+ * Version: 1.0.6
  * Description: Display a maintenance mode page except when logged in as Admin or by the query /?versite=1
  * Author: Ivan Petermann
  * Author URI: https://ivanpetermann.com
@@ -13,7 +13,7 @@
  *
  * @package WordPress
  * @author Ivan Petermann
- * @since 1.0.5
+ * @since 1.0.6
  */
 
 /*

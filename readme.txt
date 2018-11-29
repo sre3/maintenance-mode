@@ -1,5 +1,6 @@
 === IP Maintenance Mode ===
 Contributors: petermann
+Donate link: https://ivanpetermann.com/donation
 Tags: maintenance, mode, petermann
 Requires at least: 4.0
 Tested up to: 4.9

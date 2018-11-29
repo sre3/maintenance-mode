@@ -1,9 +1,9 @@
 === IP Maintenance Mode ===
 Contributors: petermann
 Tags: maintenance, mode, petermann
-Requires at least: 4.5
+Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.0.1
+Stable tag: 1.0.6
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,5 +22,5 @@ Install the plugin by:
 
 == Changelog ==
 
-= 1.0.1 =
-* First version!!!
+= 1.0.6 =
+* Initial release.

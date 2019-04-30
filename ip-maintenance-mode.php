@@ -1,12 +1,12 @@
 <?php
 /*
  * Plugin Name: IP Maintenance Mode
- * Version: 1.0.6
+ * Version: 1.0.7
  * Description: Display a maintenance mode page except when logged in as Admin or by the query /?versite=1
  * Author: Ivan Petermann
  * Author URI: https://ivanpetermann.com
  * Requires at least: 4.0
- * Tested up to: 4.8
+ * Tested up to: 5
  *
  * Text Domain: ip-maintenance-mode
  * Domain Path: /languages/
@@ -42,6 +42,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @return void
  */
+
+/**
+ * For WP-CLI
+ */
+if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1') return;
+
 function ip_maintenance_mode() {
     global $pagenow;
     $_ip_get_name    = 'versite';

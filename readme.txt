@@ -3,15 +3,15 @@ Contributors: petermann
 Donate link: https://ivanpetermann.com/donation
 Tags: maintenance, mode, petermann
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 1.0.7
-Requires PHP: 5.4
+Tested up to: 6.0
+Stable tag: 1.1.8
+Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Display a maintenance mode page except when logged in as Admin or by the query /?versite=1
+Display a maintenance mode page, except when logged in as Admin or using the /?view=1 parameter in the URL.
 
 == Installation ==
 
@@ -22,6 +22,13 @@ Install the plugin by:
 1. Go to `Settings -> IP Maintenance Mode` page and setup you phone number and message.
 
 == Changelog ==
+
+= 1.1.8 =
+* Changed the URL view parameter.
+* Changed from cookies to session.
+* Changed phrases and style.
+* Changed plugin description.
+* Tested in version 6.0
 
 = 1.0.7 =
 * Added rule for WP-CLI

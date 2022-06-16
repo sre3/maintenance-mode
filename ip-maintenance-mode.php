@@ -1,23 +1,23 @@
 <?php
 /*
  * Plugin Name: IP Maintenance Mode
- * Version: 1.0.7
- * Description: Display a maintenance mode page except when logged in as Admin or by the query /?versite=1
+ * Version: 1.1.8
+ * Description: Display a maintenance mode page, except when logged in as Admin or using the /?view=1 parameter in the URL.
  * Author: Ivan Petermann
  * Author URI: https://ivanpetermann.com
  * Requires at least: 4.0
- * Tested up to: 5
+ * Tested up to: 6.0
  *
  * Text Domain: ip-maintenance-mode
  * Domain Path: /languages/
  *
  * @package WordPress
  * @author Ivan Petermann
- * @since 1.0.6
+ * @since 1.1.8
  */
 
 /*
-Copyright 2018 Ivan Petermann  (email : contato@ivanpetermann.com.br)
+Copyright 2018 Ivan Petermann  (email : contato@ivanpetermann.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -49,17 +49,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1') return;
 
 function ip_maintenance_mode() {
-    global $pagenow;
-    $_ip_get_name    = 'versite';
-    $_ip_cookie_name = '_ip_view_site_';
-    $_ip_view_site   = (isset($_COOKIE[$_ip_cookie_name]) AND $_COOKIE[$_ip_cookie_name] == 'yes') ? true : false;
+    // Start the session
+    if ( ! session_id() )
+	    @session_start();
 
-    if (isset($_GET[$_ip_get_name]) AND $_GET[$_ip_get_name] == '0') {
-        setcookie($_ip_cookie_name, '', time() - (15 * 60));
+    global $pagenow;
+    $_ip_view_site   = (isset($_SESSION['_ipmp_view_site_']) AND $_SESSION['_ipmp_view_site_'] == 'true') ? true : false;
+
+    if ((isset($_GET['view']) AND $_GET['view'] == '0') or (isset($_GET['versite']) AND $_GET['versite'] == '0')) {
+        $_SESSION['_ipmp_view_site_'] = false;
         wp_redirect(home_url());
         exit;
-    } elseif (isset($_GET[$_ip_get_name]) AND $_GET[$_ip_get_name] == '1') {
-        setcookie($_ip_cookie_name, 'yes', 30 * DAYS_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN);
+    } elseif ((isset($_GET['view']) AND $_GET['view'] == '1') or (isset($_GET['versite']) AND $_GET['versite'] == '1')) {
+        $_SESSION['_ipmp_view_site_'] = true;
         wp_redirect(home_url());
         exit;
     }

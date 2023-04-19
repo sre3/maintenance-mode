@@ -1,19 +1,19 @@
 <?php
 /*
  * Plugin Name: IP Maintenance Mode
- * Version: 1.1.8
+ * Version: 1.1.9
  * Description: Display a maintenance mode page, except when logged in as Admin or using the /?view=1 parameter in the URL.
  * Author: Ivan Petermann
  * Author URI: https://ivanpetermann.com
  * Requires at least: 4.0
- * Tested up to: 6.0
+ * Tested up to: 6.2
  *
  * Text Domain: ip-maintenance-mode
  * Domain Path: /languages/
  *
  * @package WordPress
  * @author Ivan Petermann
- * @since 1.1.8
+ * @since 1.1.9
  */
 
 /*
@@ -72,10 +72,10 @@ function ip_maintenance_mode() {
             wp_redirect('/previa/');
             exit;
         } else {
-            header('HTTP/1.1 503 Service Temporarily Unavailable');
-            header('Status: 503 Service Temporarily Unavailable');
-            header('Retry-After: 300');
-            header('Content-Type: text/html; charset=utf-8');
+            @header('HTTP/1.1 503 Service Temporarily Unavailable');
+            @header('Status: 503 Service Temporarily Unavailable');
+            @header('Retry-After: 300');
+            @header('Content-Type: text/html; charset=utf-8');
             if (file_exists(plugin_dir_path(__FILE__) . 'views/maintenance.php')) {
                 require_once plugin_dir_path(__FILE__) . 'views/maintenance.php';
             }

@@ -3,8 +3,8 @@ Contributors: petermann
 Donate link: https://ivanpetermann.com/donation
 Tags: maintenance, mode, petermann
 Requires at least: 4.0
-Tested up to: 6.0
-Stable tag: 1.1.8
+Tested up to: 6.2
+Stable tag: 1.1.9
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,10 @@ Install the plugin by:
 1. Go to `Settings -> IP Maintenance Mode` page and setup you phone number and message.
 
 == Changelog ==
+
+= 1.1.9 =
+* Hide return errors.
+* Tested in version 6.2
 
 = 1.1.8 =
 * Changed the URL view parameter.

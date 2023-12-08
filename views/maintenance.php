@@ -4,8 +4,8 @@
  *
  * @package   ip-maintenance-mode
  *
- * @copyright Copyright (c) 2018, Ivan Petermann
- * @license   GPL2+
+ * @copyright Copyright (c) 2023, Ivan Petermann
+ * @license   GPL-3.0-or-later
  */
 ?>
 <!DOCTYPE html>

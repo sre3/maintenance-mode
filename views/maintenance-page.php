@@ -1,10 +1,10 @@
 <?php
-/**
- * Maintenance mode template that"s shown to logged out users.
+/*
+ * Maintenance mode page template that is shown to logged out users.
  *
- * @package   ip-maintenance-mode
+ * @package   maintenance-mode
  *
- * @copyright Copyright (c) 2023, Ivan Petermann
+ * @copyright Copyright (c) 2023 Ivan Petermann, Copyright (c) 2024 sre3
  * @license   GPL-3.0-or-later
  */
 ?>
@@ -21,14 +21,14 @@
 
 	<link rel="stylesheet" href="<?php echo plugins_url('assets/css/maintenance.min.css', dirname(__FILE__)); ?>">
 
-	<title><?php echo esc_html(get_bloginfo('name')); ?> - <?php _e('Melhorias estão sendo implementadas!', 'ip-maintenance-mode');?>.</title>
+	<title><?php echo esc_html(get_bloginfo('name')); ?> - <?php _e('Site Under Maintenance', 'maintenance-mode');?>.</title>
 </head>
 <body>
 <div class="absolute"></div>
 <div class="container">
 	<div class="wrap">
-		<h1><?php _e('Melhorias estão sendo implementadas!', 'ip-maintenance-mode');?></h1>
-		<p><?php _e('Aguarde, em breve estaremos de volta com nosso site.', 'ip-maintenance-mode');?></p>
+		<h1><?php _e('Site Under Maintenance', 'maintenance-mode');?></h1>
+		<p><?php _e('The site will be back up shortly', 'maintenance-mode');?></p>
 		<h2><?php echo esc_html(get_bloginfo('name')); ?></h2>
 	</div>
 </div>

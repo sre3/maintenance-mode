@@ -1,0 +1,25 @@
+=== Maintenance Mode ===
+Contributors: petermann, sre3
+Requires at least: 4.0
+Tested up to: 6.4.3
+Stable tag: 1.2.10
+Requires PHP: 5.6
+License: GPL-3.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+== Description ==
+
+Display a maintenance mode page, except when logged in as an administrator.
+
+== Installation ==
+
+Install the plugin by:
+
+1. Upload `maintenance-mode.zip` using the `Add Plugins` menu.
+1. Activate the plugin through the 'Plugins' menu in WordPress.
+1. Go to `Settings -> Maintenance Mode` to enable/disable maintenance mode.
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release.
